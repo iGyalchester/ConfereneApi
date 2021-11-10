@@ -10,7 +10,7 @@ public class Speaker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long speakers_id;
+    private Long speaker_id;
 
     private String first_name;
     private String last_name;
@@ -18,9 +18,9 @@ public class Speaker {
     private String company;
     private String speaker_bio;
 
-    @Lob//helps dealt with large objects
-    @Type(type="org.hibernate.type.BinaryType")//deal with binary data. without it, it will be stored as a string
-    private byte [] speaker_photo;
+//    @Lob//helps dealt with large objects
+//    @Type(type="org.hibernate.type.BinaryType")//deal with binary data. without it, it will be stored as a string
+//    private byte [] speaker_photo;
 
     @ManyToMany(mappedBy = "speakers")
     private java.util.List<Session> sessions;
@@ -28,13 +28,13 @@ public class Speaker {
 
     }
 
-    public byte[] getSpeaker_photo() {
-        return speaker_photo;
-    }
-
-    public void setSpeaker_photo(byte[] speaker_photo) {
-        this.speaker_photo = speaker_photo;
-    }
+//    public byte[] getSpeaker_photo() {
+//        return speaker_photo;
+//    }
+//
+//    public void setSpeaker_photo(byte[] speaker_photo) {
+//        this.speaker_photo = speaker_photo;
+//    }
 
     public List<Session> getSessions() {
         return sessions;
@@ -45,11 +45,11 @@ public class Speaker {
     }
 
     public Long getSpeakers_id() {
-        return speakers_id;
+        return speaker_id;
     }
 
     public void setSpeakers_id(Long speakers_id) {
-        this.speakers_id = speakers_id;
+        this.speaker_id = speakers_id;
     }
 
     public String getFirst_name() {

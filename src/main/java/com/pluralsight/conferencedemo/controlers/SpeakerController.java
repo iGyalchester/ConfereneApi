@@ -20,6 +20,7 @@ public class SpeakerController {
     }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.I_AM_A_TEAPOT)
     public List<Speaker> getAllSpeakers() {
         return speakerService.getAllSpeakers();
     }
